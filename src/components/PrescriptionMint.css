@@ -1,0 +1,865 @@
+/* PrescriptionMint Component Styles */
+.prescription-mint {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem 1rem;
+  padding-bottom: 8rem; /* Space for chatbot */
+}
+
+.prescription-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 2rem 1rem;
+}
+
+.prescription-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.prescription-hero p {
+  font-size: 1.3rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Container */
+.prescription-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Login Required Section */
+.login-required {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.login-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+.login-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-card h2 {
+  color: #FF9933;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-card p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.3);
+}
+
+/* Wallet Section */
+.wallet-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #FF9933;
+}
+
+.wallet-section h2 {
+  color: #FF9933;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wallet-connect {
+  text-align: center;
+  padding: 2rem;
+}
+
+.wallet-info {
+  margin-bottom: 2rem;
+}
+
+.wallet-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.wallet-info h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.wallet-info p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.connect-wallet-btn {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.connect-wallet-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.3);
+}
+
+.connect-wallet-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.wallet-connected {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wallet-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #138808;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.wallet-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wallet-address,
+.wallet-balance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.wallet-address code {
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wallet-address code:hover {
+  background: #e9ecef;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #f8f9fa;
+}
+
+/* Prescription Form Section */
+.prescription-form-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #138808;
+}
+
+.prescription-form-section h2 {
+  color: #138808;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.prescription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 1rem 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: #fafafa;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #FF9933;
+  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.1);
+  background: white;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.mint-btn {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  border: none;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.mint-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.3);
+}
+
+.mint-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Minted Prescriptions */
+.minted-prescriptions {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.minted-prescriptions h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.prescriptions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.prescription-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.prescription-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: #FF9933;
+}
+
+.prescription-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prescription-icon {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.prescription-info h3 {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.prescription-info p {
+  color: #666;
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+.blockchain-badge {
+  margin-left: auto;
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.prescription-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.detail-row .value {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.blockchain-info {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.blockchain-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.blockchain-detail:last-child {
+  margin-bottom: 0;
+}
+
+.blockchain-detail .label {
+  font-weight: 600;
+  color: #666;
+}
+
+.blockchain-detail code {
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.blockchain-detail code:hover {
+  background: #e9ecef;
+}
+
+.prescription-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #f8f9fa;
+}
+
+.prescription-footer .date {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.view-btn {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+}
+
+/* Info Section */
+.info-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.info-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item h3 {
+  color: #FF9933;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.info-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design for Large Screens */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .prescription-container {
+    max-width: 1800px;
+  }
+  
+  .prescription-hero h1 {
+    font-size: 4rem;
+  }
+  
+  .prescription-hero p {
+    font-size: 1.6rem;
+    max-width: 1200px;
+  }
+  
+  .wallet-section,
+  .prescription-form-section,
+  .minted-prescriptions,
+  .info-section {
+    padding: 3rem;
+  }
+  
+  .wallet-section h2,
+  .prescription-form-section h2,
+  .minted-prescriptions h2 {
+    font-size: 2.2rem;
+  }
+  
+  .wallet-icon {
+    font-size: 4rem;
+  }
+  
+  .wallet-info h3 {
+    font-size: 1.8rem;
+  }
+  
+  .wallet-info p {
+    font-size: 1.2rem;
+  }
+  
+  .connect-wallet-btn {
+    font-size: 1.3rem;
+    padding: 1.5rem 3rem;
+  }
+  
+  .wallet-address,
+  .wallet-balance {
+    font-size: 1.1rem;
+  }
+  
+  .wallet-address code {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 1.2rem;
+    padding: 1.2rem 1.8rem;
+  }
+  
+  .mint-btn {
+    font-size: 1.4rem;
+    padding: 1.8rem 2.5rem;
+  }
+  
+  .prescriptions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+  }
+  
+  .prescription-card {
+    padding: 2rem;
+  }
+  
+  .prescription-icon {
+    font-size: 2.5rem;
+  }
+  
+  .prescription-info h3 {
+    font-size: 1.6rem;
+  }
+  
+  .prescription-info p {
+    font-size: 1.1rem;
+  }
+  
+  .detail-row .label,
+  .detail-row .value {
+    font-size: 1.1rem;
+  }
+  
+  .blockchain-detail {
+    font-size: 1rem;
+  }
+  
+  .blockchain-detail code {
+    font-size: 0.9rem;
+  }
+  
+  .view-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .info-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .info-icon {
+    font-size: 4rem;
+  }
+  
+  .info-item h3 {
+    font-size: 1.6rem;
+  }
+  
+  .info-item p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .prescription-container {
+    max-width: 1400px;
+  }
+  
+  .prescription-hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .prescription-hero p {
+    font-size: 1.4rem;
+    max-width: 1000px;
+  }
+  
+  .wallet-section,
+  .prescription-form-section,
+  .minted-prescriptions,
+  .info-section {
+    padding: 2.8rem;
+  }
+  
+  .wallet-section h2,
+  .prescription-form-section h2,
+  .minted-prescriptions h2 {
+    font-size: 2rem;
+  }
+  
+  .wallet-icon {
+    font-size: 3.5rem;
+  }
+  
+  .wallet-info h3 {
+    font-size: 1.6rem;
+  }
+  
+  .wallet-info p {
+    font-size: 1.1rem;
+  }
+  
+  .connect-wallet-btn {
+    font-size: 1.2rem;
+    padding: 1.3rem 2.6rem;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 1.1rem;
+    padding: 1.1rem 1.6rem;
+  }
+  
+  .mint-btn {
+    font-size: 1.3rem;
+    padding: 1.6rem 2.2rem;
+  }
+  
+  .prescriptions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .prescription-card {
+    padding: 1.8rem;
+  }
+  
+  .prescription-icon {
+    font-size: 2.2rem;
+  }
+  
+  .prescription-info h3 {
+    font-size: 1.4rem;
+  }
+  
+  .info-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .info-icon {
+    font-size: 3.5rem;
+  }
+  
+  .info-item h3 {
+    font-size: 1.4rem;
+  }
+  
+  .info-item p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Standard Responsive Design */
+@media (max-width: 768px) {
+  .prescription-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .prescription-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .prescriptions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .wallet-section,
+  .prescription-form-section,
+  .minted-prescriptions,
+  .info-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prescription-hero {
+    padding: 1rem;
+  }
+  
+  .prescription-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .prescription-container {
+    gap: 2rem;
+  }
+  
+  .wallet-section,
+  .prescription-form-section,
+  .minted-prescriptions,
+  .info-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .prescription-card {
+    padding: 1rem;
+  }
+  
+  .prescription-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .blockchain-badge {
+    margin-left: 0;
+  }
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.prescription-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.prescription-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.prescription-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,719 @@
+/* Symptoms Checker Component Styles */
+.symptoms-checker {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 0;
+  padding-bottom: 8rem;
+}
+
+.symptoms-hero {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 0;
+}
+
+.symptoms-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.symptoms-hero p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: white;
+}
+
+.symptoms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.symptoms-main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Left Side - Symptoms Form */
+.symptoms-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.symptoms-form h2 {
+  color: #FF9933;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.symptoms-underline {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  margin-bottom: 1.5rem;
+}
+
+.symptoms-instruction {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.symptoms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.symptom-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.symptom-item:hover {
+  background: #fff;
+  border-color: #FF9933;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 153, 51, 0.2);
+}
+
+.symptom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.symptom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.symptom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  border-color: #FF9933;
+}
+
+.symptom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.symptom-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.symptom-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.symptom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.symptom-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.symptom-translation {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.symptoms-summary {
+  background: #fff9f0;
+  border: 2px solid #FF9933;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.selected-count {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.count-label {
+  color: #666;
+}
+
+.count-number {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.check-symptoms-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check-symptoms-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.3);
+}
+
+.symptoms-results {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #e8f5e8;
+  border-radius: 12px;
+  border-left: 4px solid #138808;
+}
+
+.symptoms-results h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.symptoms-results p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.recommendations,
+.when-to-see-doctor {
+  margin-bottom: 1.5rem;
+}
+
+.recommendations h4,
+.when-to-see-doctor h4 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.recommendations ul,
+.when-to-see-doctor ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendations li,
+.when-to-see-doctor li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #666;
+}
+
+.recommendations li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #138808;
+  font-weight: bold;
+}
+
+.when-to-see-doctor li::before {
+  content: '⚠️';
+  position: absolute;
+  left: 0;
+}
+
+/* Right Side - Health Information */
+.health-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.health-info-card,
+.emergency-info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.health-info-card h3,
+.emergency-info-card h3 {
+  color: #FF9933;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.info-underline {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  margin-bottom: 1.5rem;
+}
+
+.health-resources {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resource-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.resource-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+  font-size: 2rem;
+  color: #FF9933;
+}
+
+.resource-content {
+  flex: 1;
+}
+
+.resource-content h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resource-content p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.resource-btn {
+  background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resource-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(255, 153, 51, 0.2);
+}
+
+/* Modal Styles */
+.guide-modal,
+.hospitals-modal,
+.medications-modal {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #FF9933;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.guide-modal h4,
+.hospitals-modal h4,
+.medications-modal h4 {
+  color: #FF9933;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f8f9fa;
+  padding-bottom: 0.5rem;
+}
+
+.guide-item,
+.hospital-item,
+.medication-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #FF9933;
+}
+
+.guide-item h5,
+.hospital-item h5,
+.medication-item h5 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.guide-item p,
+.hospital-item p,
+.medication-item p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.emergency-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.emergency-number {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.number-icon {
+  font-size: 1.5rem;
+}
+
+.number-details h4 {
+  color: #333;
+  margin: 0 0 0.25rem 0;
+}
+
+.phone-number {
+  color: #dc3545;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.emergency-note {
+  background: #fff5f5;
+  border-left: 4px solid #dc3545;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.emergency-note p {
+  color: #721c24;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design for Large Screens */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .symptoms-container {
+    max-width: 1800px;
+  }
+  
+  .symptoms-hero {
+    padding: 4rem 2rem;
+  }
+  
+  .symptoms-hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .symptoms-hero p {
+    font-size: 1.5rem;
+    max-width: 900px;
+  }
+  
+  .symptoms-form,
+  .health-info-card,
+  .emergency-info-card {
+    padding: 3rem;
+  }
+  
+  .symptoms-form h2,
+  .health-info-card h3,
+  .emergency-info-card h3 {
+    font-size: 2rem;
+  }
+  
+  .symptoms-instruction {
+    font-size: 1.3rem;
+  }
+  
+  .symptom-item {
+    padding: 1.5rem;
+  }
+  
+  .checkmark {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .symptom-icon {
+    font-size: 2rem;
+  }
+  
+  .symptom-name {
+    font-size: 1.2rem;
+  }
+  
+  .symptom-translation {
+    font-size: 1rem;
+  }
+  
+  .check-symptoms-btn {
+    font-size: 1.3rem;
+    padding: 1.5rem 2.5rem;
+  }
+  
+  .symptoms-results {
+    padding: 2.5rem;
+  }
+  
+  .symptoms-results h3 {
+    font-size: 1.6rem;
+  }
+  
+  .symptoms-results p {
+    font-size: 1.2rem;
+  }
+  
+  .recommendations h4,
+  .when-to-see-doctor h4 {
+    font-size: 1.3rem;
+  }
+  
+  .recommendations li,
+  .when-to-see-doctor li {
+    font-size: 1.1rem;
+    padding-left: 1.8rem;
+  }
+  
+  .resource-item {
+    padding: 1.5rem;
+  }
+  
+  .resource-icon {
+    font-size: 2.5rem;
+  }
+  
+  .resource-content h4 {
+    font-size: 1.3rem;
+  }
+  
+  .resource-content p {
+    font-size: 1.1rem;
+  }
+  
+  .resource-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .emergency-number {
+    padding: 1.5rem;
+  }
+  
+  .number-icon {
+    font-size: 2rem;
+  }
+  
+  .number-details h4 {
+    font-size: 1.3rem;
+  }
+  
+  .phone-number {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .symptoms-container {
+    max-width: 1400px;
+  }
+  
+  .symptoms-hero {
+    padding: 3.5rem 2rem;
+  }
+  
+  .symptoms-hero h1 {
+    font-size: 3rem;
+  }
+  
+  .symptoms-hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+  }
+  
+  .symptoms-form,
+  .health-info-card,
+  .emergency-info-card {
+    padding: 2.5rem;
+  }
+  
+  .symptoms-form h2,
+  .health-info-card h3,
+  .emergency-info-card h3 {
+    font-size: 1.8rem;
+  }
+  
+  .symptoms-instruction {
+    font-size: 1.2rem;
+  }
+  
+  .symptom-item {
+    padding: 1.2rem;
+  }
+  
+  .symptom-icon {
+    font-size: 1.8rem;
+  }
+  
+  .symptom-name {
+    font-size: 1.1rem;
+  }
+  
+  .check-symptoms-btn {
+    font-size: 1.2rem;
+    padding: 1.3rem 2.2rem;
+  }
+  
+  .symptoms-results {
+    padding: 2.2rem;
+  }
+  
+  .symptoms-results h3 {
+    font-size: 1.5rem;
+  }
+  
+  .symptoms-results p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Standard Responsive Design */
+@media (max-width: 768px) {
+  .symptoms-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .symptoms-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .symptoms-hero p {
+    font-size: 1rem;
+  }
+  
+  .symptoms-main-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .symptoms-form,
+  .health-info-card,
+  .emergency-info-card {
+    padding: 1.5rem;
+  }
+  
+  .symptom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .symptom-checkbox {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .symptoms-container {
+    padding: 1rem;
+  }
+  
+  .symptoms-form,
+  .health-info-card,
+  .emergency-info-card {
+    padding: 1rem;
+  }
+  
+  .symptoms-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .check-symptoms-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animations */
+.symptom-item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.symptom-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.symptom-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.symptom-item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
